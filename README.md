@@ -1,0 +1,1 @@
+Trying Fragments with Jetpack Compose sot that I don't have to deal with Compose-Navigation
