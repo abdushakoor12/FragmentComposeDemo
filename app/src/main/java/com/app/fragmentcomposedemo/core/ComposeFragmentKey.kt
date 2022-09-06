@@ -10,12 +10,6 @@ import androidx.compose.ui.platform.ViewCompositionStrategy
 import com.app.fragmentcomposedemo.ui.theme.FragmentComposeDemoTheme
 import com.zhuinden.simplestackextensions.fragments.KeyedFragment
 
-//abstract class ComposeFragmentKey : FragmentKey() {
-//
-//    @Composable
-//    abstract fun FragmentContent()
-//}
-
 abstract class ComposeFragment : KeyedFragment() {
 
     override fun onCreateView(

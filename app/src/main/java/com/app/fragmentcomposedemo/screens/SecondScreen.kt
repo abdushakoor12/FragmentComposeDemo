@@ -15,11 +15,11 @@ import com.zhuinden.simplestackextensions.fragmentsktx.backstack
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-class FirstScreen : FragmentKey() {
-    override fun instantiateFragment() = FirstScreenFragment()
+class SecondScreen : FragmentKey() {
+    override fun instantiateFragment() = SecondScreenFragment()
 }
 
-class FirstScreenFragment : ComposeFragment() {
+class SecondScreenFragment : ComposeFragment() {
 
     @Composable
     override fun FragmentContent() {
@@ -27,14 +27,9 @@ class FirstScreenFragment : ComposeFragment() {
         Box(modifier = Modifier
             .fillMaxSize()
             .background(MaterialTheme.colors.background)) {
-            Button(
-                modifier = Modifier.align(Alignment.Center),
-                onClick = {
-                    backstack.goTo(SecondScreen())
-                }
-            ){
-                Text("Go to second screen")
-            }
+
+            Text("Second Screen", modifier = Modifier.align(Alignment.Center))
+
         }
 
     }

@@ -47,6 +47,12 @@ class MainActivity : AppCompatActivity(), SimpleStateChanger.NavigationHandler {
     override fun onNavigationEvent(stateChange: StateChange) {
         fragmentStateChanger.handleStateChange(stateChange)
     }
+
+    override fun onBackPressed() {
+        if (!Navigator.onBackPressed(this)) {
+            super.onBackPressed()
+        }
+    }
 }
 
 @Composable
